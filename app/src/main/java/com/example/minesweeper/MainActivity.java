@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+
                 startActivity(i);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
 
             }
 
