@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         int fieldY = Integer.parseInt(editTextY.getText().toString());
         int fieldMines = Integer.parseInt(editTextMines.getText().toString());
 
-        if (fieldMines <= 10 || fieldMines >= 500 || fieldY <= 0 || fieldY >= 100 || (fieldMines * 5) >= (fieldY * fieldY * 4)) {
+        if (fieldMines < 10 || fieldMines > 5000 || fieldY < 8 || fieldY > 100 || (fieldMines * 5) >= (fieldY * fieldY * 4)) {
             new AlertDialog.Builder(this)
                     .setTitle("Warning!")
-                    .setMessage("Поля заполнены неправильно! Минимальные значения: 8х8, 10 мин; Максимальные значения: 60х60, 250 мин. Мин на поле не может быть больше 3/4 самого поля")
+                    .setMessage("Поля заполнены неправильно! Минимальные значения: 8х8, 10 мин; Максимальные значения: 100х100, 800 мин. Мин на поле не может быть больше 4/5 самого поля")
 
                     // Specifying a listener allows you to take an action before dismissing the dialog.
                     // The dialog is automatically dismissed when a dialog button is clicked.
