@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Field"
-    android:background="#bbbbbb">
+    android:background="#bbbbbb"
+    tools:context=".Field">
 
 
     <Button
@@ -13,36 +13,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#555555"
-        android:text="Заново"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        android:text="@string/repeatText"
+        android:onClick="restartGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:ignore="OnClick,UsingOnClickInXml" />
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="411dp"
-        android:layout_height="664dp"
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96">
-    </TableLayout>
+        app:layout_constraintVertical_bias="1.0">
+
+        <HorizontalScrollView
+            android:id="@+id/hScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.96">
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+    </ScrollView>
 
     <TextView
-        android:id="@+id/minesText"
+        android:id="@+id/resultOfGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="81dp"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/restartButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minesTextLeast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="30dp"
-        android:text="Mines"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        android:text="@string/minesText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -14,13 +14,12 @@
         android:layout_height="103dp"
         android:layout_marginBottom="36dp"
         android:backgroundTint="#555555"
-        android:text="Начать"
         android:onClick="beginGame"
+        android:text="Начать"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/title"
@@ -44,4 +43,5 @@
         app:layout_constraintStart_toStartOf="@+id/startButton"
         app:layout_constraintTop_toTopOf="@+id/startButton"
         app:srcCompat="@drawable/effect" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

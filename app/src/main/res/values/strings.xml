@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Minesweeper</string>
+    <string name="minesText">Мины:</string>
+    <string name="repeatText">Заново</string>
 </resources>
